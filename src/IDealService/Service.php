@@ -7,7 +7,7 @@ use
     IDealService\AcquirerConnector\AdapterBroker,
     IDealService\Model\IssuersCollection,
     IDealService\Model\Error,
-    Zend\Cache\Storage\Adapter\AdapterInterface as CacheAdapterInterface,
+    Zend\Cache\Storage\Adapter\AbstractAdapter as CacheAdapter,
     Zend\EventManager\Event,
     Zend\ServiceManager\ServiceManager,
     Zend\ServiceManager\ServiceManagerAwareInterface,
@@ -52,7 +52,7 @@ class Service implements ServiceManagerAwareInterface
     protected $acquirerConnectorAdapter;
 
 
-    public function setCache(CacheAdapterInterface $cache)
+    public function setCache(CacheAdapter $cache)
     {
         $this->cache = $cache;
     }
