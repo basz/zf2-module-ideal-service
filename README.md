@@ -17,6 +17,8 @@ PLEASE USE AT YOUR OWN RISK. REALLY!
 
 updated to work with ZF2 beta-4
 
+[![Build Status](https://secure.travis-ci.org/basz/zf2-module-ideal-service.png?branch=master)](http://travis-ci.org/basz/zf2-module-ideal-service)
+
 ## About iDEAL
 [ideal](http://www.ideal.nl/ "iDEAL") is a standardized payment method for making secure online payments directly between
 bank accounts. To offer iDEAL as a payment method in an online store, a direct link is

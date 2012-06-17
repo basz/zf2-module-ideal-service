@@ -16,7 +16,7 @@ class ServiceOptionsTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->options = new ServiceOptions(array('merchantId'=>'123', 'vendorMethod'=>'someMethod'));
+        $this->options = new ServiceOptions(array('vendorOptions' => array( 'merchantId'=>'123' ), 'vendorMethod'=>'someMethod'));
     }
 
     /**
@@ -27,13 +27,7 @@ class ServiceOptionsTest extends \PHPUnit_Framework_TestCase
         $exceptionRaised = false;
 
         try {
-            $so = new ServiceOptions(array('vendorMethod'=>'someMethod'));
-        } catch (\RuntimeException $e) {
-            $exceptionRaised = true;
-        }
-
-        try {
-            $so = new ServiceOptions(array('merchantId'=>'somecode'));
+            $so = new ServiceOptions(array());
         } catch (\RuntimeException $e) {
             $exceptionRaised = true;
         }
@@ -44,7 +38,7 @@ class ServiceOptionsTest extends \PHPUnit_Framework_TestCase
 
     public function testVendorMethodIsProtected()
     {
-        $methods = array('setMerchantId', 'setVendorMethod');
+        $methods = array('setVendorMethod');
 
         foreach ($methods as $method) {
         if (!method_exists($this->options, $method)) {

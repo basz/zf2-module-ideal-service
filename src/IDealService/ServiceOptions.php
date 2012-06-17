@@ -20,7 +20,7 @@ class ServiceOptions extends Options
      * @var string
      */
     protected $securePath;
-    protected $merchantId;
+    protected $merchantId; /* vendor specific */
 
     protected $subId; /* vendor specific */
     protected $localPrivateKey; /* PRIVATEKEY */ /* vendor specific */
