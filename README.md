@@ -30,9 +30,9 @@ iDEAL is steadily gaining a reputation as a trusted online payment method. Alrea
 than half of all Dutch online shoppers use iDEAL.
 
 ## Supported Acquirers
-  * Ing (Advanced)
-  * Sisow (Rest)
-  * TargetPay
+  * Ing (Advanced) _broken_
+  * Sisow (Rest) 
+  * TargetPay _broken_
 
 _Note: It will probably be a while before any new Acquirers are added. However I encourage you
 to submit a pull request if you write a adapter for some Acquirer._
@@ -61,28 +61,9 @@ and then update
 There are several actions you can perform. These actions are triggered by dispatching an
 event to which this module will respond.
 
-### Events
-#### Request issuers list
+_todo_
 
-
-#### Prepare a transaction
-
-
-#### Query the status of an transaction
-
-
-  $t = new Transaction(array('price', 'description', 'etc')); settable via constructor, can't be changed
-
-
-    * result : Transaction object
-
-
-
-
-  3. Check the status of an Transaction
-
-
-## Licence
+## License
 The MIT License (MIT)
 Copyright (c) 2012 bushbaby multimedia
 
