@@ -2,9 +2,9 @@
 
 namespace IDealService\AcquirerConnector\Adapter\Options;
 
-use \Zend\Stdlib\Options;
+use \Zend\Stdlib\AbstractOptions;
 
-class CommonOptions extends Options
+class CommonOptions extends AbstractOptions
 {
     protected $merchantId;
 
