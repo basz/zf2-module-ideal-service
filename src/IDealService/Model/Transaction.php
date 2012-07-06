@@ -2,10 +2,11 @@
 
 namespace IDealService\Model;
 
-use \Zend\Stdlib\Options,
-    \Zend\Stdlib\Parameters;
+use Zend\Stdlib\AbstractOptions;
+use Zend\Stdlib\Parameters;
+use Zend\Uri\UriFactory;
 
-class Transaction extends Options
+class Transaction extends AbstractOptions
 {
 
     protected $reference;
@@ -131,7 +132,7 @@ class Transaction extends Options
      */
     protected function setReturnUrl($returnUrl)
     {
-        $uri = new \Zend\Uri\Http($returnUrl);
+        $uri = UriFactory::factory($returnUrl, 'http');
         if (!$uri->isValid())
             throw new \InvalidArgumentException(sprintf("Not a valid url '%s'.", $returnUrl));
 

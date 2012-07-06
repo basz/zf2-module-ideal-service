@@ -2,10 +2,10 @@
 
 namespace IDealService;
 
-use \Zend\Stdlib\Options,
+use \Zend\Stdlib\AbstractOptions,
     \Zend\Stdlib\Parameters;
 
-class ServiceOptions extends Options
+class ServiceOptions extends AbstractOptions
 {
 
     /**

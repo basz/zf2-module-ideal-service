@@ -15,7 +15,7 @@ dev-master
 THIS RELEASE IS A DEVELOPMENT RELEASE AND NOT INTENDED FOR PRODUCTION USE.
 PLEASE USE AT YOUR OWN RISK. REALLY!
 
-updated to work with ZF2 beta-4
+updated to work with ZF2 beta-5
 
 [![Build Status](https://secure.travis-ci.org/basz/zf2-module-ideal-service.png?branch=master)](http://travis-ci.org/basz/zf2-module-ideal-service)
 
