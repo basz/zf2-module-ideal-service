@@ -22,7 +22,7 @@
             "IDealService": "src/"
         },
         "classmap": [
-            "./"
+            "Module.php"
         ]
     }
  }
