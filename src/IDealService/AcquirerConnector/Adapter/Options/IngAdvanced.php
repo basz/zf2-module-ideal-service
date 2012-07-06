@@ -2,8 +2,6 @@
 
 namespace IDealService\AcquirerConnector\Adapter\Options;
 
-use \Zend\Stdlib\Options;
-
 class IngAdvanced extends CommonOptions
 {
     protected $subId;

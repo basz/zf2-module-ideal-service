@@ -2,10 +2,10 @@
 
 namespace IDealService\Model;
 
-use \Zend\Stdlib\Options,
+use \Zend\Stdlib\AbstractOptions,
     \Zend\Stdlib\Parameters;
 
-class TransactionStatus extends Options
+class TransactionStatus extends AbstractOptions
 {
     protected $transactionId;
     protected $status;

@@ -18,19 +18,19 @@ class Module
         /**
          * \Zend\EventManager\SharedEventManager
          */
-        $sharedEvents = $mvcEvent->getApplication()->events()->getSharedManager();
+        $sharedEvents = $mvcEvent->getApplication()->getEventManager()->getSharedManager();
 
-        $sharedEvents->attach('Zend\Mvc\Controller\ActionController', 'ideal-request-issuers-list', function(\Zend\EventManager\Event $e) {
+        $sharedEvents->attach('Zend\Mvc\Controller\AbstractActionController', 'ideal-request-issuers-list', function(\Zend\EventManager\Event $e) {
                     $service = $e->getTarget()->getServiceLocator()->get('IDealService');
                     return $service->requestIssuerList($e);
                 }, 100);
 
-        $sharedEvents->attach('Zend\Mvc\Controller\ActionController', 'ideal-request-transaction', function(\Zend\EventManager\Event $e) {
+        $sharedEvents->attach('Zend\Mvc\Controller\AbstractActionController', 'ideal-request-transaction', function(\Zend\EventManager\Event $e) {
                     $service = $e->getTarget()->getServiceLocator()->get('IDealService');
                     return $service->requestTransaction($e);
                 }, 100);
 
-        $sharedEvents->attach('Zend\Mvc\Controller\ActionController', 'ideal-request-transaction-status', function(\Zend\EventManager\Event $e) {
+        $sharedEvents->attach('Zend\Mvc\Controller\AbstractActionController', 'ideal-request-transaction-status', function(\Zend\EventManager\Event $e) {
                     $service = $e->getTarget()->getServiceLocator()->get('IDealService');
                     return $service->requestStatus($e);
                 }, 100);
