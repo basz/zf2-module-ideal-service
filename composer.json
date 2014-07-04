@@ -15,7 +15,7 @@
       "module"
    ],
    "require":{
-      "zendframework/zendframework": "dev-master"
+      "zendframework/zendframework": "~2.0"
    },
    "autoload": {
         "psr-0": {
